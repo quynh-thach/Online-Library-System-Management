@@ -4,11 +4,11 @@ class Library:
         self.books = []
 
 
-    def CheckOut(self, book, patron):
+    def CheckOut(self, book, customer):
         if book.num_avail == 0:
             print("No copies left!")
             
-        elif book.name in patron.cobooks.keys():
+        elif book.name in customer.cobooks.keys():
             print("You already have this book!")
         
         elif len(patron.cobooks) > 2:
@@ -19,12 +19,12 @@ class Library:
             book.num_avail -= 1
 
   
-    def CheckIn(self, book, patron):
-        if book.name not in patron.cobooks.keys():
+    def CheckIn(self, book, customer):
+        if book.name not in customer.cobooks.keys():
             print("You can't check in a book that wasn't checked out!")
        
         else:
-            patron.cobooks.pop(book.name)
+            customer.cobooks.pop(book.name)
             book.num_avail += 1
 
 
