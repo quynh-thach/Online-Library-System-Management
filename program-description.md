@@ -31,5 +31,5 @@ In the library system, the **name** and the **number of copies** of a book is re
   - Arguments: name of the book.
 11. Create a function to see all kinds of records.
   
-## LIBRARY SYSTEM SETUP\
+## LIBRARY SYSTEM SETUP
    Use if/else to control the flow of procedures.
